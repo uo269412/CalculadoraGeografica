@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora geográfica</title>
+        <link rel="stylesheet" type="text/css" href="Ejercicio6.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="Ejercicio6.js"></script>
+    </head>
+    <body>
+        <h1>Calculadora geográfica</h1>
+        <section>
+            <h2>Datos</h2>
+                <p> Radio Equatorial (metros) </p>
+                <input title = "datos1" type="text" id="EqRadBox" size="10" maxlength="10" value = 6378388 disabled>
+                <p> Radio Polar (metros) </p>
+                <input title = "datos2" type="text" id="PolRadBox" size="10" maxlength="10" value = 6356911.9 disabled>
+                <p> Aplanamiento </p>
+                <input title = "datos3" type="text" id="FlatBox" size="10" maxlength="10" value = 0.003367 disabled>
+                <p> 1/Aplanamiento </p>
+                <input title = "datos4" type="text" id="RecipBox" size="10" maxlength="10" value = 296.9993621 disabled>
+        </section>
+        <section>
+            <h2>Conversor de grados, minutos y segundos a UTM</h2>
+                <h3>Latitud</h3>
+                    <h4>En grados</h4>
+                        <p> Grados (º) </p>
+                        <input title = "latitud" type="text" name="latitud" id="latitud" value = "">
+                <h3>Longitud</h3>
+                    <h4>En grados</h4>
+                        <p> Grados (º) </p>
+                        <input title = "longitud" type="text" name="longiutd" id="longitud" value = "">
+                        <label for="convertir">Click para computar: </label> 
+                    <input type="button" value="Convertir a UTM" id = "convertir" onclick="calculadora.GeogToUTM()"> 
+        </section>
+        <section>
+            <h2>Resultados</h2>
+                <p>UTM (x)</p>
+                <input title = "x" type="text" name="x" id="x" value = "" disabled> 
+                <p>UTM (y)</p>
+                <input title = "y" type="text" name="y" id="y" value = "" disabled>
+        </section>   
+    </body>
+</html>
